@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+.next/
+out/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+backend/database/data/*.sql
+database/raw_data/*.csv
+!database/raw_data/.gitkeep
+
+# Internal references (Exclude from Git)
+RENDER_DEPLOYMENT.md
+VERCEL_DEPLOYMENT.md
+sharing_guide.md
+docs/DEMO_GUIDE.md
+docs/PRD.md
+docs/DESIGN.md
