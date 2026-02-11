@@ -10,8 +10,16 @@ const pool = new Pool({
 async function run() {
     try {
         const metricsService = new MetricsService(pool);
+
+        // Compute for Bajaj (NBFC)
+        console.log('--- BAJAJ FINANCE (NBFC) ---');
         await metricsService.computeMetrics('BAJAJ_FINANCE');
-        console.log('Metrics computation process completed.');
+
+        // Compute for Infosys (IT)
+        console.log('\n--- INFOSYS (IT) ---');
+        await metricsService.computeMetrics('INFY');
+
+        console.log('\nMetrics computation process completed for all companies.');
     } catch (err) {
         console.error('Metrics computation failed:', err.message);
         process.exit(1);
